@@ -27,6 +27,17 @@ def create_table():
     conn.close()
 
 def evaluate_candidate(r1, r2, r3, tech):
+    if (
+        r1 < 6.5 or
+        r2 < 6.5 or
+        r3 < 6.5 or 
+        tech < 13
+    ) :
+        total = r1 + r2 + r3 + tech
+        return total, "Rejected"
+
+       
+        
     total = r1 + r2 + r3 + tech
     result = "Selected" if total >= 35 else "Rejected"
     return total, result
