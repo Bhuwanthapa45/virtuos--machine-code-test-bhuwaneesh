@@ -27,6 +27,7 @@ def create_table():
     conn.close()
 
 def evaluate_candidate(r1, r2, r3, tech):
+    #updated code during the machine test as asked
     if (
         r1 < 6.5 or
         r2 < 6.5 or
